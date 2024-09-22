@@ -1,0 +1,3 @@
+[2024-09-22 12:09:02,673] INFO _log() L97    * Restarting with stat - call_trace=/Users/danilo.brito/Projects/PUC/MVP - Sprint 3/api/.venv/lib/python3.12/site-packages/werkzeug/_internal.py L97  
+[2024-09-22 12:09:04,008] WARNING _log() L97    * Debugger is active! - call_trace=/Users/danilo.brito/Projects/PUC/MVP - Sprint 3/api/.venv/lib/python3.12/site-packages/werkzeug/_internal.py L97  
+[2024-09-22 12:09:04,016] INFO _log() L97    * Debugger PIN: 460-895-174 - call_trace=/Users/danilo.brito/Projects/PUC/MVP - Sprint 3/api/.venv/lib/python3.12/site-packages/werkzeug/_internal.py L97  

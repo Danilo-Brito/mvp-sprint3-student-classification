@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,7 @@
 </head>
 
 <body>
-     <!-- Cabeçalho de informações do sistema -->
+    <!-- Cabeçalho de informações do sistema -->
     <header>
         <div class="title">
             <h2>Bem vindo ao Student Grade</h2>
@@ -21,45 +22,61 @@
             <p>Este sistema desenvolvido para auxiliar na avaliaçãp final do aluno.</p>
             <p>Para isso, basta preencher os campos abaixo com os dados do aluno e clicar em "Avaliar".</p>
         </div>
-        <!-- <div class="banner">
-            <img src="img/home.jpeg">
-        </div> -->
     </header>
 
-     <!-- Opções para adicionar um novo item -->
-     
+    <!-- Opções para adicionar um novo item -->
     <section class="newItem">
-        <input type="text" id="newInput" placeholder="Name">
-        <input type="text" id="newPreg" placeholder="Gender">
-        <input type="text" id="newPlas" placeholder="Attendance Rate">
-        <input type="text" id="newPres" placeholder="Study Hours Per Week">
-        <input type="text" id="newSkin" placeholder="Previous Grade">
-        <input type="text" id="newTest" placeholder="Extra curricular Activities">
-        <input type="text" id="newMass" placeholder="Parental Support">
-        <span onclick="newItem()" class="addBtn">Avaliar</span>
-    </section>
-
-    <!-- Tabela com items existentes -->
-    <section class="items">
-        <table id="myTable">
+        <table>
             <tr>
                 <th>Name</th>
                 <th>Gender</th>
-                <th>AttendanceRate</th>
+                <th>Attendance Rate</th>
                 <th>Study Hours Per Week</th>
                 <th>Previous Grade</th>
                 <th>Extra curricular Activities</th>
                 <th>Parental Support</th>
-                <th>Final Grade</th>
-                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15" height="15"></th>
-                <!-- <th><img src="img/edit.png" width="15" height="15"></th> -->
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text" id="name" placeholder="Name"></td>
+                <td>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+                <td><input type="text" id="attRate" placeholder="Attendance Rate"></td>
+                <td><input type="text" id="studyPWeek" placeholder="Study Hours Per Week"></td>
+                <td><input type="text" id="prevGrade" placeholder="Previous Grade"></td>
+                <td><input type="text" id="extActivies" placeholder="Extra curricular Activities"></td>
+                <td> <select id="parenSupport">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select></td>
+                <td> <span onclick="newItem()" class="addBtn">Avaliar</span></td>
             </tr>
         </table>
     </section>
 
-    <script src="scripts.js"></script>
+        <!-- Tabela com items existentes -->
+        <section class="items">
+            <table id="myTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>AttendanceRate</th>
+                    <th>Study Hours Per Week</th>
+                    <th>Previous Grade</th>
+                    <th>Extra curricular Activities</th>
+                    <th>Parental Support</th>
+                    <th>Final Grade</th>
+                    <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15" height="15"></th>
+                </tr>
+            </table>
+        </section>
+
+        <script src="scripts.js"></script>
 </body>
 
 </html>
-
-

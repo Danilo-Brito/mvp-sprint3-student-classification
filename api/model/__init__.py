@@ -6,17 +6,18 @@ import os
 # importando os elementos definidos no modelo
 from model.base import Base
 from model.student import Student
-from model.Charger import Charger
-# TODO: Precisa adicionar os outros modelos (Pipeline, Carregador, Avaliador ...)
+from model.charger import Charger
+from model.pipeline import Pipeline
+from model.preprocessor import PreProcessor
 
 db_path = "database/"
-# Verifica se o diretório existe
+# Verifica se o diretorio não existe
 if not os.path.exists(db_path):
-    # cria o diretório
+    # então cria o diretorio
     os.makedirs(db_path)
 
-# url de acesso ao banco
-db_url = 'sqlite://%s/students.sqlite3' % db_path
+# url de acesso ao banco (essa é uma url de acesso ao sqlite local)
+db_url = 'sqlite:///%s/students.sqlite3' % db_path
 
 # cria a engine de conexão com o banco
 engine = create_engine(db_url, echo=False)

@@ -4,27 +4,17 @@ from typing import Union
 from model import Base
 
 
-#  StudentID,
-#  Name,
-#  Gender,
-#  AttendanceRate,
-#  StudyHoursPerWeek,
-#  PreviousGrade,
-#  ExtracurricularActivities,
-#  ParentalSupport,
-#  FinalGrade
-
 class Student(Base):
     __tablename__ = 'student'
 
     id = Column(Integer, primary_key=True)
     name = Column("Name", String(50))
-    gender = Column("Gender", String(50))
+    gender = Column("Gender", Integer)
     attendanceRate = Column("AttendanceRate", Integer)
     studyHoursPerWeek = Column("StudyHoursPerWeek", Integer)
     previousGrade = Column("PreviousGrade", Integer)
     extracurricularActivities = Column("ExtracurricularActivities", Integer)
-    parentalSupport = Column("ParentalSupport", String(50))
+    parentalSupport = Column("ParentalSupport", Integer)
     finalGrade = Column("FinalGrade", Integer, nullable=True)
     data_insert = Column(DateTime, default=datetime.now())
 
