@@ -18,7 +18,6 @@ class PreProcessor:
     def prepare_form(form):
         """ Prepara os dados recebidos do front para serem usados no modelo. """
         X_input = np.array([
-            form.name,
             form.gender,
             form.attendance_rate,
             form.study_hours_per_week,
@@ -30,6 +29,7 @@ class PreProcessor:
         X_input = X_input.reshape(1, -1)
         return X_input
 
+    @staticmethod
     def scaler(X_train):
         """ Normaliza os dados. """
         # normalização/padronização

@@ -55,34 +55,33 @@ def add_student(form: StudentSchema):
     """"Adiciona um novo estudante a base de dados"""
 
     # Recuperando os dados do formuário
-    name = form.name,
-    gender = form.gender,
-    attendance_rate = form.attendanceRate,
-    study_hours_per_week = form.studyHoursPerWeek,
-    previous_grade = form.previousGrade,
-    extracurricular_activities = form.extracurricularActivities,
-    parental_support = form.parentalSupport
+    name = form.name
+    gender = form.gender
+    attendance_rate = form.attendance_rate
+    study_hours_per_week = form.study_hours_per_week
+    previous_grade = form.previous_grade
+    extracurricular_activities = form.extracurricular_activities
+    parental_support = form.parental_support
 
     # Preparando os dados para o modelo
     X_input = PreProcessor.prepare_form(form)
 
     # Carregando o modelo
-    model_path = './MachineLearning/pipelines/best_student_performance_model.pkl'
+    model_path = './MachineLearning/pipelines/rf_student_pipeline.pkl'
     modelo = Pipeline.load_pipeline(model_path)
 
     # Realizando precição
     final_grade = int(Model.preditor(modelo, X_input)[0])
 
     student_obj = Student(
-        id=id,
         name=name,
         gender=gender,
-        attendanceRate=attendance_rate,
-        studyHoursPerWeek=study_hours_per_week,
-        previousGrade=previous_grade,
-        extracurricularActivities=extracurricular_activities,
-        parentalSupport=parental_support,
-        finalGrade=final_grade
+        attendance_rate=attendance_rate,
+        study_hours_per_week=study_hours_per_week,
+        previous_grade=previous_grade,
+        extracurricular_activities=extracurricular_activities,
+        parental_support=parental_support,
+        final_grade=final_grade
     )
     logger.debug(f"Adicionando produto de nome: '{student_obj.name}'")
 
@@ -91,7 +90,7 @@ def add_student(form: StudentSchema):
 
         # Checando se paciente já existe na base
         if session.query(Student).filter(Student.name == form.name).first():
-            error_msg = "Estudante já existente na base :/"
+            error_msg = "Estudante já existente na base :"
             logger.warning(f"Erro ao adicionar estudante '{student_obj.name}', {error_msg}")
             return {"message": error_msg}, 409
 
@@ -102,7 +101,7 @@ def add_student(form: StudentSchema):
 
     except Exception as e:
         error_msg = "Não foi possível salvar novo item :/"
-        logger.warning(f"Erro ao adicionar paciente '{student_obj.name}', {error_msg}")
+        logger.warning(f"Erro ao adicionar estudante '{student_obj.name}', {error_msg}, {e}")
         return {"message": error_msg}, 400
 
 

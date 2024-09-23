@@ -1,37 +1,38 @@
 body,
 ul,
 li {
-    font-family: tahoma;
+    font-family: 'Comic Sans MS', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(225, 222, 199);
+    background-color: #f5f5f5;
 }
 
 header {
-    background-color: rgb(225, 222, 199);
+    background-color: #2c3e50;
     text-align: center;
     position: relative;
     width: 100%;
+    padding: 20px;
 }
 
 .title {
     color: white;
     width: 100%;
-    background-color: rgb(35, 32, 24);
+    background-color: #34495e;
     display: inline-block;
-    padding: 2px 0px;
+    padding: 10px 0px;
     position: sticky;
     top: 0px;
+    font-family: 'Comic Sans MS', sans-serif;
 }
 
-.banner {
-    height: 300px;
-    overflow: hidden;
+.title h2 {
+    text-shadow: 1px 1px #2ab53a;
 }
 
 .banner img {
-    margin: 0px 0px 0px 0px;
+    margin: 0;
     width: 100%;
 }
 
@@ -41,49 +42,51 @@ header {
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
-    table-layout: fixed;
+    background-color: #ecf0f1;
 }
 
 .newItem table {
     border-collapse: collapse;
     border: none;
-    background-color: transparent;
+    background-color: #ecf0f1;
+    width: 100%;
 }
 
 .newItem th,
 .newItem td {
-    border: none;
-    background-color: transparent;
+    background-color: #ffffff;
     padding: 10px;
     text-align: left;
-    width: calc(100% / 7);
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 2px solid #95a5a6;
 }
 
-.newItem table input, table select {
-    border: none;
+.newItem th {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+}
+
+.newItem td input,
+.newItem td select {
+    border: 2px dashed #3498db;
     outline: none;
     color: black;
     padding: 5px;
     width: 100%;
-}
-
-.itemType {
-    color: #000000;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
+    background-color: #f5f5f5;
 }
 
 .addBtn {
-    padding: 9px 10px;
-    background-color: rgb(35, 32, 24);
+    padding: 10px 15px;
+    background-color: #3498db;
     color: white;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 2px;
+    border-radius: 5px;
+    border: none;
 }
 
 .addBtn:hover {
@@ -93,48 +96,45 @@ header {
 
 .items {
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.close:hover {
-    color: #f44336;
-    font-weight: bolder;
-}
-
-.update:hover {
-    color: #000000;
-    font-weight: bolder;
-}
-
 .items table,
-th,
-td {
-    border: 1px solid black;
+.items th,
+.items td {
+    border: 1px solid #7f8c8d;
     border-collapse: collapse;
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 10px;
+    padding: 12px;
     font-size: 18px;
     transition: 0.2s;
     text-align: start;
+    width: 100%;
 }
 
 .items table {
     background-color: white;
-    width: 50%;
-}
-
-.items tr:nth-child(odd) {
-    background-color: #eee;
-}
-
-.items th:nth-child(1) {
     width: 80%;
 }
 
+.items tr:nth-child(odd) {
+    background-color: #ecf0f1;
+}
+
+.items th {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+}
+
 .items tr:hover {
-    background: rgb(200, 199, 199);
+    background: #dfe6e9;
+}
+
+.close:hover,
+.update:hover {
+    color: #e74c3c;
+    font-weight: bolder;
 }

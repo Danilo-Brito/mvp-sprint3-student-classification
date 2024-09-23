@@ -7,12 +7,12 @@ class StudentSchema(BaseModel):
     """ Define como um novo estudante a ser inserido deve ser representado
     """
     name: str = "Bacate"
-    gender: str = "Male"
-    attendanceRate: int = 85
-    studyHoursPerWeek: int = 15
-    previousGrade: int = 78
-    extracurricularActivities: int = 1
-    parentalSupport: str = "High"
+    gender: int = 1
+    attendance_rate: int = 85
+    study_hours_per_week: int = 15
+    previous_grade: int = 78
+    extracurricular_activities: int = 1
+    parental_support: int = 2
 
 
 class StudentViewSchema(BaseModel):
@@ -20,13 +20,13 @@ class StudentViewSchema(BaseModel):
     """
     id: int = 1
     name: str = "Bacate"
-    gender: str = "Male"
-    attendanceRate: int = 85
-    studyHoursPerWeek: int = 15
-    previousGrade: int = 78
-    extracurricularActivities: int = 1
-    parentalSupport: str = "High"
-    finalGrade: int = None
+    gender: int = 1
+    attendance_rate: int = 85
+    study_hours_per_week: int = 15
+    previous_grade: int = 78
+    extracurricular_activities: int = 1
+    parental_support: int = 2
+    final_grade: int = None
 
 
 class StudentSearchSchema(BaseModel):
@@ -44,12 +44,12 @@ def show_single_student(student: Student):
         "id": student.id,
         "name": student.name,
         "gender": student.gender,
-        "attendanceRate": student.attendanceRate,
-        "studyHoursPerWeek": student.studyHoursPerWeek,
-        "previousGrade": student.previousGrade,
-        "extracurricularActivities": student.extracurricularActivities,
-        "parentalSupport": student.parentalSupport,
-        "finalGrade": student.finalGrade,
+        "attendance_rate": student.attendance_rate,
+        "study_hours_per_week": student.study_hours_per_week,
+        "previous_grade": student.previous_grade,
+        "extracurricular_activities": student.extracurricular_activities,
+        "parental_support": student.parental_support,
+        "final_grade": student.final_grade,
     }
 
 
@@ -63,12 +63,12 @@ def show_students(students: List[Student]):
             "id": student.id,
             "name": student.name,
             "gender": student.gender,
-            "attendanceRate": student.attendanceRate,
-            "studyHoursPerWeek": student.studyHoursPerWeek,
-            "previousGrade": student.previousGrade,
-            "extracurricularActivities": student.extracurricularActivities,
-            "parentalSupport": student.parentalSupport,
-            "finalGrade": student.finalGrade,
+            "attendance_rate": student.attendance_rate,
+            "study_hours_per_week": student.study_hours_per_week,
+            "previous_grade": student.previous_grade,
+            "extracurricular_activities": student.extracurricular_activities,
+            "parental_support": student.parental_support,
+            "final_grade": student.final_grade,
         })
 
         return {"students": result}
