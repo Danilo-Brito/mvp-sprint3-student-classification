@@ -34,7 +34,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for test_models.test_model_knn.executor": "Run",
     "Python tests.Python tests for test_models.test_model_lr.executor": "Run",
+    "Python tests.Python tests for test_models.test_model_rf.executor": "Run",
     "Python.app.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
