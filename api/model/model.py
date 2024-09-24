@@ -6,10 +6,7 @@ from model.preprocessor import PreProcessor
 
 class Model:
 
-    # TODO: Guardar model como atributo e o preditor receber as entradas.
-    # TODO: preditor -> realiza_predicao
-
-    def load_modelo(path):
+    def load_model(path):
         """Dependendo se o final for .pkl ou .joblib, carregamos de uma forma ou de outra
         """
 
