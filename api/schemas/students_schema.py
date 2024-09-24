@@ -71,4 +71,4 @@ def show_students(students: List[Student]):
             "final_grade": student.final_grade,
         })
 
-        return {"students": result}
+    return {"students": result}
